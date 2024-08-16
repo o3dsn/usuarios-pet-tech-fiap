@@ -1,9 +1,6 @@
 package br.com.fiap.api.usuarios_pettech.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -11,6 +8,7 @@ import java.util.Objects;
 @Entity
 @Table(name="tb_usuario")
 public class Usuario {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
